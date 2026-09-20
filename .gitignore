@@ -41,5 +41,7 @@ secrets.yml
 
 .idea/
 .cursor/
+.cursorrules
+PROJECT_STATE.md
 *.log
 .DS_Store
