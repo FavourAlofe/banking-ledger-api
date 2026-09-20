@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: banking-ledger-api
+  datasource:
+    url: jdbc:postgresql://localhost:5433/ledger_db
+    username: ${DB_USERNAME:ledger}
+    password: ${DB_PASSWORD:ledger}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        format_sql: true
+    show-sql: false
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
